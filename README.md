@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/amesken/sonarqube:latest.svg)](https://imagelayers.io/?images=amesken/sonarqube:latest 'Get your own badge on imagelayers.io')
+
 # SonarQube
 
 Run [Sonarqube](http://www.sonarqube.org/) inside a Docker container.
