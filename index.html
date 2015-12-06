@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Sonarqube by amesken</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Sonarqube</h1>
+        <h2></h2>
+
+        <section id="downloads">
+          <a href="https://github.com/amesken/sonarqube/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/amesken/sonarqube/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/amesken/sonarqube" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="sonarqube" class="anchor" href="#sonarqube" aria-hidden="true"><span class="octicon octicon-link"></span></a>SonarQube</h1>
+
+<p>Run <a href="http://www.sonarqube.org/">Sonarqube</a> inside a Docker container.</p>
+
+<p>(this image is using the embedded h2 database)</p>
+
+<h2>
+<a id="volumes" class="anchor" href="#volumes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Volumes</h2>
+
+<p>Sonarqube <code>data</code>, <code>logs</code> and <code>extensions</code> directories are exported as data volume:</p>
+
+<pre><code>&lt;USER_HOME&gt;/docker/data/sonarqube/data
+&lt;USER_HOME&gt;/docker/data/sonarqube/logs
+&lt;USER_HOME&gt;/docker/data/sonarqube/extensions
+</code></pre>
+
+<h2>
+<a id="ports" class="anchor" href="#ports" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ports</h2>
+
+<p>The service is exposed through port <code>9000</code>.</p>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>To run sonarqube do:</p>
+
+<pre><code>docker run -p 19000:9000 amesken/sonarqube
+</code></pre>
+
+<p>Now point your browser to <a href="http://192.168.99.100:19000/sonar">http://192.168.99.100:19000/sonar</a></p>
+
+<p>Administration is done by user <code>admin</code> with password <code>admin</code>.</p>
+
+<h2>
+<a id="context-of-this-image" class="anchor" href="#context-of-this-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Context of this image</h2>
+
+<p>This sonarqube image is originally created to work with a complete Continuous Delivery tool stack which can be obtained from <a href="https://hub.docker.com/r/amesken/cd-tool-stack/">docker</a> or <a href="https://github.com/amesken/cd-tool-stack">github</a>.
+The image is based on <a href="https://blog.codecentric.de/en/2015/10/continuous-integration-platform-using-docker-container-jenkins-sonarqube-nexus-gitlab">this blog article</a> by Marcel Birkner.</p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-70105547-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
